@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
-import scikit-learn as sklearn
+import sklearn
 # Load trained Linear Regression model
 with open("linear_regression.pkl", "rb") as f:
     model = pickle.load(f)
