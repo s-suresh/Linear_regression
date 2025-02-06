@@ -13,7 +13,7 @@ st.title("🏡 House Price Predictor")
 st.write("Enter the median income to predict the price.")
 
 # User input for median income
-MedInc = st.number_input("Enter Median Income in $:", min_value=1.064848, max_value=14.996047)
+MedInc = st.number_input("Enter Median Income in 10,000$:", min_value=1.064848, max_value=14.996047)
 
 if st.button("Predict Price"):
     prediction = model.predict(np.array([[MedInc]]))[0]
@@ -44,7 +44,7 @@ ax.plot(data['Median Income ($)'], data['Predicted Price ($)'], label='Predicted
 ax.scatter(MedInc, prediction, color='red', zorder=5, label="Data Points")
 
 # Add labels and title
-ax.set_xlabel('Median Income ($)')
+ax.set_xlabel('Median Income (10,000$)')
 ax.set_ylabel('Predicted Price ($)')
 ax.set_title('House Price Prediction Based on Median Income')
 ax.legend()
